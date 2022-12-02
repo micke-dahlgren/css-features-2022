@@ -20,17 +20,24 @@ html,body{
   height: 100vh;
   padding:0;
   margin:0;
-  overflow: hidden;
+}
+#nav{
+  text-align: center;
 }
 
 #app{
-  max-width: 30rem;
+  max-width: 1280px;
   height:100%;
   margin: 0 auto;
 }
 
-.content{
-  min-width: 20rem;
+.page{
+  margin: 0 24rem;
+}
+
+.page-lg{
+  display:grid;
+  place-items: center;
 }
 
 .spacing-sm{
@@ -53,4 +60,18 @@ html,body{
 .space-between{
   display:flex;
   justify-content: space-between;
+}
+
+.max-width{
+  max-width:20rem;
+}
+
+.flex-row{
+  display:flex;
+  justify-content: space-between;
+}
+
+.remove-button-styling{
+  all: unset;
+  cursor: pointer;
 }

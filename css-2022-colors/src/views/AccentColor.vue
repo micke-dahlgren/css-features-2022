@@ -9,16 +9,19 @@
 </script>
 
 <template>
+  <div class="page">
   <h1 class="spacing-md"><span>Accent</span> Color</h1>
 
   <Checkbox />
   <ProgressBar />
   <Slider />
   <RadioButtons />
-  
+
   <div class="spacing-lg outlined space-between">
     <span>Color</span><input type="color" v-model="accentColor">
   </div>
+</div>
+  
 </template>
 
 <style scoped>

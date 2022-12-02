@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import ExampleSlot from '../ExampleSlot.vue';
-import { onMounted, ref } from 'vue'
+import { onBeforeUnmount, onMounted, ref } from 'vue'
 const progress = ref(0);
 const progressSpeedMs = 60;
 const progressTimer = () => {
@@ -14,15 +13,29 @@ const progressTimer = () => {
     progressTimer();
   }
 }
+
+const clearAllTimeouts = ():void => {
+  const highestId = window.setTimeout(() => {
+    for (let i = highestId; i >= 0; i--) {
+      window.clearInterval(i);
+    }
+  }, 0);
+}
+
 onMounted(() => {
   progressTimer();
+})
+
+onBeforeUnmount(() => {
+  clearAllTimeouts();
 })
 </script>
 
 <template>
-  <ExampleSlot>
+  <div class="spacing-sm outlined space-between">
     <span>Progress </span>
     <progress max="100" :value="progress"> </progress>
-  </ExampleSlot>
+  </div>
+
 </template>
 

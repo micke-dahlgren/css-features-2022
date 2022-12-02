@@ -1,6 +1,7 @@
 import { createWebHistory, createRouter } from "vue-router";
 import Home from "../views/Home.vue";
 import AccentColor from "../views/AccentColor.vue";
+import Colorv1Fonts from "../views/Colorv1Fonts.vue";
 
 const routes = [
   {
@@ -12,6 +13,11 @@ const routes = [
     path: "/accent-color",
     name: "AccentColor",
     component: AccentColor,
+  },
+  {
+    path: "/COLORv1-fonts",
+    name: "Colorv1Fonts",
+    component: Colorv1Fonts,
   },
 ];
 
