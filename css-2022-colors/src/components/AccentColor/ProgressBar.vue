@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import ExampleSlot from '../ExampleSlot.vue';
 import { onMounted, ref } from 'vue'
 const progress = ref(0);
 const progressSpeedMs = 60;
@@ -19,10 +20,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="spacing-sm outlined space-between">
+  <ExampleSlot>
     <span>Progress </span>
     <progress max="100" :value="progress"> </progress>
-  </div>
-
+  </ExampleSlot>
 </template>
 

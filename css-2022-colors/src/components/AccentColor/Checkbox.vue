@@ -1,11 +1,12 @@
 <script setup lang="ts">
-  import { ref } from 'vue'
-  const checkbox = ref(true);
+import { ref } from 'vue'
+import ExampleSlot from '../ExampleSlot.vue';
+const checkbox = ref(true);
 </script>
 
 <template>
-  <div class="spacing-sm outlined space-between">
+  <ExampleSlot>
     <span> Checkbox </span>
     <input type="checkbox" v-model="checkbox" />
-  </div>
+  </ExampleSlot>
 </template>
