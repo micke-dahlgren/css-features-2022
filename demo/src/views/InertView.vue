@@ -1,5 +1,10 @@
 <script setup lang="ts">
-//
+/*
+TODO: 
+- Create modal component
+- Create buttons inside this file that have property inert
+
+*/
 </script>
 
 <template>
