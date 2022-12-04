@@ -1,5 +1,24 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+//
+</script>
 
-<template></template>
+<template>
+  <main>
+    <h1>Inert</h1>
+    <div class="container"></div>
+  </main>
+</template>
 
-<style scoped></style>
+<style scoped>
+main {
+  display: grid;
+  grid-template-rows: 50px auto;
+  grid-gap: 8px;
+  height: calc(100% - 30px);
+}
+
+.container {
+  background: #fff;
+  border: 1px solid black;
+}
+</style>

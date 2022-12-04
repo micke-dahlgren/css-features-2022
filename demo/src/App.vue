@@ -4,8 +4,7 @@
 
 <template>
   <nav>
-    <router-link to="/">Home</router-link>
-    <router-link to="/@container">@Container</router-link>
+    <router-link to="/">@Container</router-link>
     <router-link to="/inert">Inert</router-link>
   </nav>
   <router-view />
@@ -16,6 +15,7 @@ nav {
   gap: 8px;
   display: flex;
   justify-content: center;
+  height: 30px;
 }
 
 a {

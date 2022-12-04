@@ -1,16 +1,10 @@
 import { createWebHistory, createRouter } from 'vue-router';
-import Home from '../views/Home.vue';
 import InertView from '../views/InertView.vue';
 import ContainerView from '../views/ContainerView.vue';
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home,
-  },
-  {
-    path: '/@container',
     name: '@Container',
     component: ContainerView,
   },
