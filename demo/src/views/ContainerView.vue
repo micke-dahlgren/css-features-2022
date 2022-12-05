@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useElementSize } from '@vueuse/core';
+import Card from '../components/Card.vue';
 
 const cards = ref(1);
 
@@ -25,9 +26,11 @@ TODO:
     </div>
     <button class="btn" @click="cards++">add cards</button>
     <div class="container" ref="containerRef">
-      <div class="card" v-for="(card, index) in cards" :key="index">
+      <!-- <div class="card" v-for="(card, index) in cards" :key="index">
         {{ index }}
-      </div>
+      </div> -->
+
+      <Card v-for="(card, index) in cards" :key="index" />
     </div>
     <div class="sidepanel">
       <div class="card"></div>
