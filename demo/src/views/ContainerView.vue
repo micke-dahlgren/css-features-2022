@@ -13,7 +13,7 @@ const { width } = useElementSize(containerRef);
 TODO: 
 - Create card component with image and text fields, that are randomized
 - Create random data and images to use in cards
-- Examplify multible @container by adding "container-name"
+- Examplify multible @container by adding "container-name" <------------------------den
 
 */
 </script>
@@ -69,6 +69,9 @@ main {
   flex-wrap: nowrap;
   align-items: center;
   gap: 16px;
+
+  container-type: inline-size;
+  container-name: sidepanel;
 }
 
 .container {
@@ -84,6 +87,7 @@ main {
   overflow-x: hidden;
 
   container-type: inline-size;
+  container-name: containerDiv;
 }
 
 .card {
@@ -100,9 +104,15 @@ main {
   grid-row: 1;
 }
 
-@container (max-width: 400px) {
+@container containerDiv (max-width: 400px) {
   .card {
     background-color: blue;
+  }
+}
+
+@container sidepanel (max-width: 400px) {
+  .card {
+    background-color: green;
   }
 }
 </style>
