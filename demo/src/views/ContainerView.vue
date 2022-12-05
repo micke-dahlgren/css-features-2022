@@ -26,10 +26,12 @@ TODO:
     </div>
     <button class="btn" @click="cards++">add cards</button>
     <div class="container" ref="containerRef">
+      <!-- example 1 -->
       <!-- <div class="card" v-for="(card, index) in cards" :key="index">
         {{ index }}
       </div> -->
 
+      <!-- example 2 -->
       <Card v-for="(card, index) in cards" :key="index" />
     </div>
     <div class="sidepanel">

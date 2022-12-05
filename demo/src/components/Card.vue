@@ -1,10 +1,34 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref } from 'vue';
+
+interface Dog {
+  img: string;
+  summary: string;
+  main: string;
+}
+
+const dogs: Dog[] = [
+  { img: 'https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg', summary: 'En fin hund.', main: 'En mycket fin hund faktiskt' },
+  {
+    img: 'https://i.guim.co.uk/img/media/fe1e34da640c5c56ed16f76ce6f994fa9343d09d/0_174_3408_2046/master/3408.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=0d3f33fb6aa6e0154b7713a00454c83d',
+    summary: 'En ledsen hund.',
+    main: 'Ser ledsen ut.',
+  },
+  {
+    img: 'https://www.thesprucepets.com/thmb/7TDhfkK5CAKBWEaJfez6607J48Y=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/chinese-dog-breeds-4797219-hero-2a1e9c5ed2c54d00aef75b05c5db399c.jpg',
+    summary: 'Pug',
+    main: 'Också gullig',
+  },
+];
+
+const random = ref(Math.floor(Math.random() * dogs.length - 1) + 1);
+</script>
 
 <template>
   <div class="wrapper">
-    <img class="img" src="https://www.cdc.gov/healthypets/images/pets/cute-dog-headshot.jpg?_=42445" alt="dog" />
-    <span class="summary">tjena hejsan</span>
-    <span class="main">tjo man</span>
+    <img class="img" :src="dogs[random].img" alt="dog" />
+    <span class="summary">{{ dogs[random].summary }}</span>
+    <span class="main">{{ dogs[random].main }}</span>
   </div>
 </template>
 
@@ -38,7 +62,7 @@
 
 .main {
   grid-area: main;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .img {
