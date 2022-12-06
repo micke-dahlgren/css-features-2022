@@ -1,0 +1,45 @@
+.header-button{
+  all:unset;
+  cursor: pointer;
+  min-width: 100%;
+}
+
+.sliders{
+  margin:2rem 0;
+  display:flex;
+  justify-content: space-around;
+}
+.slider{
+  display:flex;
+  justify-items: baseline;
+}
+
+.flex-center-col{
+  box-sizing: border-box;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  min-width:100%;
+}
+
+.color-input-group{
+  display:flex;
+  justify-content: space-around;
+  margin-top:1rem;
+  min-width:100%;
+}
+
+.color-input-group > div > input{
+  margin-left: 1rem;
+}
+
+.disabled{
+  opacity:0.5;
+  pointer-events: none;
+}
+
+.example-text{
+  line-height: 1;
+  font-size: min(5.5rem, 8vw);
+  margin:1rem;
+}

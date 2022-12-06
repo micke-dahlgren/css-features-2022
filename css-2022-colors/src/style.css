@@ -32,7 +32,7 @@ html,body{
 }
 
 .page{
-  margin: 0 24rem;
+  margin: 0 min(20vw, 24rem);
 }
 
 .page-lg{
@@ -55,6 +55,7 @@ html,body{
   outline: 1px solid gray;
   border-radius:2px;
   padding:1rem;
+  overflow:hidden;
 }
 
 .space-between{
