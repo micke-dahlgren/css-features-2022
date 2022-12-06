@@ -35,7 +35,6 @@ const random = ref(Math.floor(Math.random() * dogs.length - 1) + 1);
 <style scoped lang="scss">
 .wrapper {
   display: grid;
-  min-width: 100px;
   grid-gap: 8px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -49,8 +48,10 @@ const random = ref(Math.floor(Math.random() * dogs.length - 1) + 1);
   border: 2px solid black;
   padding: 12px;
   border-radius: 20px;
+  min-width: 100px;
   max-width: 300px;
   width: calc(100% - 24px);
+  max-height: 300px;
 
   container-type: inline-size;
 }
@@ -69,15 +70,16 @@ const random = ref(Math.floor(Math.random() * dogs.length - 1) + 1);
   grid-area: img;
   max-width: 100%;
   max-height: 100%;
+  min-height: 150px;
 }
 
-@container (max-width: 250px) {
+@container (max-width: 275px) {
   .summary {
     font-size: 20px;
   }
 }
 
-@container (max-width: 200px) {
+@container (max-width: 250px) {
   .wrapper {
     display: flex;
     grid-template-columns: 120px;
