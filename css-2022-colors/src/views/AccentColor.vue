@@ -25,13 +25,14 @@
 </template>
 
 <style scoped>
+
+  /* Live demo */
   h1 > span {
-    color:v-bind(accentColor);
+    color: v-bind(accentColor);
   }
 
   *{
-    accent-color: v-bind(accentColor);
+    accent-color:  v-bind(accentColor);
   }
-
 
 </style>

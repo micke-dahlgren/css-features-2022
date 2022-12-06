@@ -17,11 +17,9 @@
 <style>
 @import url(https://fonts.googleapis.com/css2?family=Noto+Color+Emoji+Compat);
 
-
 .bitmap-emoji {
-  --font-size: 160px;
   line-height: 1.2;
-  font-size: var(--font-size);
+  font-size: min(12rem, 17vw);
   font-family: "Noto Color Emoji Compat";
 }
 </style>
