@@ -8,14 +8,6 @@ const cards = ref(1);
 const containerRef = ref(null);
 
 const { width } = useElementSize(containerRef);
-
-/*
-TODO: 
-- Create card component with image and text fields, that are randomized
-- Create random data and images to use in cards
-- Examplify multible @container by adding "container-name" <------------------------den
-
-*/
 </script>
 
 <template>
