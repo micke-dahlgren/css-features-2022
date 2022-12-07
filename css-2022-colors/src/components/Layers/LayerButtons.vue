@@ -13,36 +13,44 @@
 </template>
 
 <style scoped>
-  @layer base, utilities;
-
-  @layer utilities{
-    .orange{
-      background-color: orange;
-      color:black;
-    }
+  button{
+    font-size:2rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.25em;
   }
+
+  .small-buttons > .button {
+    font-size:1.5rem;
+    background-color: gray;
+    color:white;
+    padding: .1em .25em;
+  }
+
+  .button{
+    background-color: gray;
+    color:white;
+    padding: .5em 1em;
+  }
+
+  .orange{
+    background-color: orange;
+    color:black;
+  }
+
+  /* Move the above css inte the layers below this comment to see @layers in action */
+  @layer base, colors;
+
+
+  @layer colors{
+    
+  }
+
 
   @layer base{
-    button{
-      font-size:2rem;
-      border: none;
-      cursor: pointer;
-      border-radius: 0.25em;
-    }
-  
-    .small-buttons > .button {
-      font-size:1.5rem;
-      background-color: gray;
-      color:white;
-      padding: .1em .25em;
-    }
-  
-    .button{
-      background-color: gray;
-      color:white;
-      padding: .5em 1em;
-    }
+    
   }
+
 
 
 </style>
