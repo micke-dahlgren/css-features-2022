@@ -69,7 +69,7 @@ const switchFont = () => {
 
 
 <template>
-  <section class="outlined">
+<div>
     <button class="header-button" @click="switchFont">
       <h1 class="example-text" :class="useNamblaFont && 'nabla'">Click me!</h1>
     </button>
@@ -93,7 +93,7 @@ const switchFont = () => {
         <div><span>Bevel 2: </span><input type="color" v-model="customColor.bevel2" @input="applyColor"></div>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <style scoped>
