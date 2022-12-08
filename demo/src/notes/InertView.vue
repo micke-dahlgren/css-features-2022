@@ -7,7 +7,7 @@ const showModal = ref(false);
 </script>
 
 <template>
-  <main>
+  <main :inert="showModal">
     <h1>Inert</h1>
     <div class="container">
       <div class="clicker">

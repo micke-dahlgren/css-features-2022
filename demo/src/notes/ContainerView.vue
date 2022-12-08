@@ -18,9 +18,13 @@ const { width } = useElementSize(containerRef);
     </div>
     <button class="btn" @click="cards++">add cards</button>
     <div class="container" ref="containerRef">
-      <div class="card" v-for="(card, index) in cards" :key="index">
+      <!-- example 1 -->
+      <!-- <div class="card" v-for="(card, index) in cards" :key="index">
         {{ index }}
-      </div>
+      </div> -->
+
+      <!-- example 2 -->
+      <Card v-for="(card, index) in cards" :key="index" />
     </div>
     <div class="sidepanel">
       <div class="card"></div>
@@ -95,6 +99,12 @@ main {
 @container containerDiv (max-width: 400px) {
   .card {
     background-color: blue;
+  }
+}
+
+@container sidepanel (max-width: 400px) {
+  .card {
+    background-color: green;
   }
 }
 </style>
