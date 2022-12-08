@@ -32,7 +32,11 @@ html,body{
 }
 
 .page{
-  margin: 0 min(20vw, 24rem);
+  margin: 0 min(20vw, 10rem);
+}
+
+.page-sm{
+  margin: 0 min(24vw, 20rem);
 }
 
 .page-lg{
@@ -58,6 +62,18 @@ html,body{
   overflow:hidden;
 }
 
+.underlined{
+  border-bottom: 1px solid gray;
+  padding:1rem;
+}
+
+.underlined-with-spacing{
+  border-bottom: 1px solid gray;
+  margin:5rem;
+  padding:5rem;
+}
+
+
 .space-between{
   display:flex;
   justify-content: space-between;
@@ -67,12 +83,39 @@ html,body{
   max-width:20rem;
 }
 
-.flex-row{
+.space-between{
   display:flex;
   justify-content: space-between;
 }
 
+.space-evenly{
+  display:flex;
+  justify-content: space-evenly;
+}
+
+.space-around{
+  display:flex;
+  justify-content: space-around;
+}
 .remove-button-styling{
   all: unset;
   cursor: pointer;
 }
+
+.center-text{
+  text-align: center;
+}
+
+.center-child-vertically{
+  display:grid;
+  place-items: center;
+  height:90%;
+
+}
+
+.max-width{
+
+  height:fit-content;
+  width:100%;
+}
+
