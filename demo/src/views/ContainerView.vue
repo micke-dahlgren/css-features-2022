@@ -18,11 +18,18 @@ const { width } = useElementSize(containerRef);
     </div>
     <button class="btn" @click="cards++">add cards</button>
     <div class="container" ref="containerRef">
+      <!-- example 1 -->
       <div class="card" v-for="(card, index) in cards" :key="index">
         {{ index }}
       </div>
+
+      <!-- example 3 -->
+      <!-- <Card v-for="(card, index) in cards" :key="index" /> -->
     </div>
-    <div class="sidepanel"></div>
+    <div class="sidepanel">
+      <!-- example 2 -->
+      <!-- <div class="card"></div> -->
+    </div>
   </main>
 </template>
 
@@ -55,6 +62,9 @@ main {
   flex-wrap: nowrap;
   align-items: center;
   gap: 16px;
+
+  // container-type: inline-size;
+  // container-name: sidepanel;
 }
 
 .container {
@@ -68,6 +78,9 @@ main {
   flex-wrap: wrap;
   gap: 16px;
   overflow: hidden;
+
+  // container-type: inline-size;
+  // container-name: main;
 }
 
 .card {
@@ -83,4 +96,16 @@ main {
   grid-column: 2;
   grid-row: 1;
 }
+
+// @container main (max-width: 400px) {
+//   .card {
+//     background-color: blue;
+//   }
+// }
+
+// @container sidepanel (max-width: 400px) {
+//   .card {
+//     background-color: green;
+//   }
+// }
 </style>
