@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import { useElementSize } from '@vueuse/core';
-import Card from '../components/Card.vue';
+import { ref } from "vue";
+import { useElementSize } from "@vueuse/core";
+import Card from "../components/Card.vue";
 
 const cards = ref(1);
 
@@ -76,7 +76,7 @@ main {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 16px;
-  overflow-x: hidden;
+  overflow: hidden;
 
   container-type: inline-size;
   container-name: containerDiv;

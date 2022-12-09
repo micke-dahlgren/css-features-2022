@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import { useElementSize } from '@vueuse/core';
-import Card from '../components/Card.vue';
+import { ref } from "vue";
+import { useElementSize } from "@vueuse/core";
+import Card from "../components/Card.vue";
 
 const cards = ref(1);
 
@@ -22,9 +22,7 @@ const { width } = useElementSize(containerRef);
         {{ index }}
       </div>
     </div>
-    <div class="sidepanel">
-      <div class="card"></div>
-    </div>
+    <div class="sidepanel"></div>
   </main>
 </template>
 
@@ -57,9 +55,6 @@ main {
   flex-wrap: nowrap;
   align-items: center;
   gap: 16px;
-
-  container-type: inline-size;
-  container-name: sidepanel;
 }
 
 .container {
@@ -72,10 +67,7 @@ main {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 16px;
-  overflow-x: hidden;
-
-  container-type: inline-size;
-  container-name: containerDiv;
+  overflow: hidden;
 }
 
 .card {
@@ -90,11 +82,5 @@ main {
 .btn {
   grid-column: 2;
   grid-row: 1;
-}
-
-@container containerDiv (max-width: 400px) {
-  .card {
-    background-color: blue;
-  }
 }
 </style>
